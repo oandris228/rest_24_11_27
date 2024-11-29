@@ -42,7 +42,7 @@ export class TeamService {
       where: {id: teamid},
       data: {
         players: {
-          connect: {id: playerid}
+          connect: [{id: playerid}]
         }
       }
     })

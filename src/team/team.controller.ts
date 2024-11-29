@@ -17,7 +17,7 @@ export class TeamController {
     return this.teamService.findAll();
   }
 
-  @Get('/:teamid/addPlayer/:playerid')
+  @Post('/:teamid/addPlayer/:playerid')
   addNewPlayer(@Param('teamid') teamid: string, @Param('playerid') playerid: string) {
     return this.teamService.addPlayer(+teamid, +playerid);
   }
